@@ -46,7 +46,7 @@ output "dem1" {
 
 #map variable type
 
-variable "dem2" {
+variable "sam2" {
   default={
     name="dimpul",
     num=10
