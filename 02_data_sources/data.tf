@@ -13,5 +13,9 @@ data "aws_instance" "foo" {
 }
 
 output "demo1" {
-  value = data.aws_instance.foo
+  value = data.aws_instance.foo.public_ip
+}
+
+output "demo2" {
+  value = data.aws_instance.foo.private_ip
 }
