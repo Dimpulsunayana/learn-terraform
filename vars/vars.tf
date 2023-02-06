@@ -41,7 +41,7 @@ variable "sam1" {
 }
 
 output "dem1" {
-  value=var.sam1
+  value=var.sam1[1]
 }
 
 #map variable type
@@ -54,6 +54,6 @@ variable "sam2" {
 }
 
 output "dem2" {
-  value=var.sam2
+  value=var.sam2["num"]
 }
 
