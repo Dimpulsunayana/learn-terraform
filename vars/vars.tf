@@ -57,3 +57,7 @@ output "dem2" {
   value=var.sam2["num"]
 }
 
+#variable from tfvars
+
+variable "dimpul" {}
+
