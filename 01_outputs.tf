@@ -1,3 +1,3 @@
 output "demo" {
-  value = "Hello dimpu"
+  value = "Hello dimpukitty"
 }
