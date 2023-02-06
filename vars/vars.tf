@@ -61,3 +61,6 @@ output "dem2" {
 
 variable "dimpul" {}
 
+output "dem3" {
+  value=var.dimpul
+}
