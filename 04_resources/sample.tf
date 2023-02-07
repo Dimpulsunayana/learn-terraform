@@ -16,3 +16,11 @@ resource "aws_instance" "web" {
     Name = "test-centos8"
   }
 }
+
+terraform {
+  backend "s3" {
+    bucket = "terraform-dimpu"
+    key    = "04_resources/terraform-tfstate"
+    region = "us-east-1"
+  }
+}
