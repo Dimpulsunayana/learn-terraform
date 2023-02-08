@@ -11,11 +11,9 @@ variable "demo" {
   }
 }
 
-#output "out" {
-#  value = {
-#    for k, v in aws_instance.web : k => v.public_ip
-#  }
-#}
+output "demo1" {
+  value = module.demo
+}
 
 module "demo" {
   source = "./module"
