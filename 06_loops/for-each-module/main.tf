@@ -17,6 +17,10 @@ variable "components" {
 #  }
 #}
 
+output "publicip" {
+  value = module.demo
+}
+
 module "demo" {
   source = "./module"
   for_each = var.components
