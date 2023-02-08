@@ -11,15 +11,15 @@ variable "components" {
   }
 }
 
-#output "publicip" {
-#  value = {
-#    for k, v in module.demo : k => v["ec2"].public_ip
-#  }
-#}
-
 output "publicip" {
-  value = module.demo
+  value = {
+    for k, v in module.demo : k => v["ec2"].public_ip
+  }
 }
+
+#output "publicip" {
+#  value = module.demo
+#}
 
 module "demo" {
   source = "./module"
