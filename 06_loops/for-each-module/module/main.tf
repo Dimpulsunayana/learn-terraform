@@ -17,8 +17,6 @@ variable "instance_type" {}
 
 variable "name" {}
 
-#output "publicip" {
-#  value = aws_instance.web
-##for k, v in aws_instance.web : k => v.public_ip
-#
-#}
+output "ec2" {
+  value = aws_instance.web
+}

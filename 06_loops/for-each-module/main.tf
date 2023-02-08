@@ -13,7 +13,7 @@ variable "components" {
 
 output "publicip" {
   value = {
-    for k, v in module.demo : k => v["demo"].public_ip
+    for k, v in module.demo : k => v["ec2"].public_ip
   }
 }
 
