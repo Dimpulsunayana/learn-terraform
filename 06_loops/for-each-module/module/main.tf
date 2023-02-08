@@ -13,7 +13,12 @@ resource "aws_instance" "web" {
   }
 }
 
-
 variable "instance_type" {}
 
 variable "name" {}
+
+output "publicip" {
+  value = {
+for k, v in aws_instance.web : k => v.public_ip
+}
+}
