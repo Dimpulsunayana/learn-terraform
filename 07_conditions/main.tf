@@ -6,7 +6,7 @@ data "aws_ami" "example" {
 
 resource "aws_instance" "web" {
   ami           = data.aws_ami.example.id
-  instance_type = var.sample == null ? "t3.micro" : var.sample
+  instance_type = var.sample == "null" ? "t3.micro" : var.sample
 
   tags = {
     Name = "test"
