@@ -1,4 +1,4 @@
-variable "demo" {
+variable "components" {
   default = {
     cart = {
       name="cart"
@@ -11,13 +11,15 @@ variable "demo" {
   }
 }
 
-output "demo1" {
-  value = module.demo
+output "publicip" {
+  value = {
+    for k, v in module.demo : k => v["demo"].public_ip
+  }
 }
 
 module "demo" {
   source = "./module"
-  for_each = var.demo
+  for_each = var.components
   instance_type = each.value.instance_type
   name=each.value.name
 }
