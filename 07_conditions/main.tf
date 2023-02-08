@@ -9,7 +9,7 @@ resource "aws_instance" "web" {
   instance_type = var.sample == null ? "t3.micro" : var.sample
 
   tags = {
-    Name = test
+    Name = "test"
   }
 }
 
