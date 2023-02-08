@@ -15,5 +15,5 @@ resource "aws_instance" "web" {
 }
 
 output "out" {
-  value = aws_instance.web.public_ip
+  value = aws_instance.web.*.public_ip
 }
