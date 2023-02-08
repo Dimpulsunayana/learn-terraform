@@ -17,8 +17,8 @@ variable "instance_type" {}
 
 variable "name" {}
 
-#output "publicip" {
-#  value = {
-#for k, v in module.demo : k => v.public_ip
-#}
-#}
+output "publicip" {
+  value = {
+for k, v in aws_instance.web : k => v.public_ip
+}
+}
