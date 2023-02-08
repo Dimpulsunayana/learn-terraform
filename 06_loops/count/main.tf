@@ -5,7 +5,7 @@ data "aws_ami" "example" {
 }
 
 resource "aws_instance" "web" {
-  count = 1
+  count = 3
   ami           = data.aws_ami.example.id
   instance_type = "t3.micro"
 
