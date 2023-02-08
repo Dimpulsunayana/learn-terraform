@@ -13,11 +13,6 @@ resource "aws_instance" "web" {
   }
 }
 
-output "out" {
-  value = {
-    for k, v in aws_instance.web : k => v.public_ip
-  }
-}
 
 variable "instance_type" {}
 
