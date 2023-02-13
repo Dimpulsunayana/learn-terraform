@@ -1,7 +1,3 @@
-provider "aws" {
-  region = "us-east-1"
-}
-
 data "aws_ami" "example" {
   most_recent = true
   name_regex  = "Centos-8-DevOps-Practice"
@@ -15,26 +11,6 @@ resource "aws_instance" "web" {
 
   tags = {
     Name = "test-centos8"
-  }
-
-  provisioner "remote_exec"{
-    connection {
-      user     = "centos"
-      password = "DevOps321"
-      host     = self.public_ip
-    }
-
-    inline = [
-      "false"
-    ]
-  }
-}
-
-terraform {
-  backend "s3" {
-    bucket = "terraform-dimpu"
-    key    = "04_resources/terraform-tfstate"
-    region = "us-east-1"
   }
 }
 
@@ -62,4 +38,3 @@ resource "aws_security_group" "allow_tls" {
     Name = "allow_tls"
   }
 }
-
