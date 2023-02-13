@@ -12,6 +12,18 @@ resource "aws_instance" "web" {
   tags = {
     Name = "test-centos8"
   }
+
+  provisioner "remote_exec"{
+    connection {
+      user     = "centos"
+      password = "DevOps321"
+      host     = self.public_ip
+    }
+
+    inline = [
+      "false"
+    ]
+  }
 }
 
 resource "aws_security_group" "allow_tls" {
