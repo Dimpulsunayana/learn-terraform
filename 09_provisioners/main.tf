@@ -16,12 +16,14 @@ resource "aws_instance" "web" {
   tags = {
     Name = "test-centos8"
   }
+}
 
+resource "null_resource" "provision" {
   provisioner "remote-exec"{
     connection {
       user     = "centos"
       password = "DevOps321"
-      host     = self.public_ip
+      host     = aws_instance.web.public_ip
     }
 
     inline = [
