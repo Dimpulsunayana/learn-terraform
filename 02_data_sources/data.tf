@@ -9,7 +9,7 @@ output "demo" {
 }
 
 data "aws_instance" "foo" {
-  instance_id = "i-051d424e43055076f"
+  instance_id = "i-00d9d98c37cd3002f"
 }
 
 output "demo1" {
