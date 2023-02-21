@@ -16,7 +16,7 @@ resource "aws_instance" "web" {
 
 output "out" {
   value = {
-    for k, v in aws_instance.web : k => v.public_ip
+    for k, v in aws_instance.web : k => v.instance_type
   }
 }
 
