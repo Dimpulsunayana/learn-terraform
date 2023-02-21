@@ -18,6 +18,15 @@ resource "aws_instance" "web" {
 #  }
 }
 
+resource "aws_s3_bucket" "b" {
+  bucket = "my-tf-test-bucket"
+  Name   = "terraform-dimpu"
+#  tags = {
+#    Name        = "terraform-dimpu"
+#    Environment = "Dev"
+#  }
+}
+
 terraform {
   backend "s3" {
     bucket = "terraform-dimpu"
