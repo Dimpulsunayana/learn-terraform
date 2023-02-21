@@ -18,22 +18,22 @@ resource "aws_instance" "web" {
   }
 }
 
-#resource "aws_s3_bucket" "b" {
-#  bucket = "terraform-dimpu"
-#
-##  tags = {
-##    Name        = "terraform-dimpu"
-##    #Environment = "Dev"
-##  }
-#}
+resource "aws_s3_bucket" "b" {
+  bucket = "terraform-dimpu"
 
-#terraform {
-#  backend "s3" {
-#    bucket = "terraform-dimpu"
-#    key    = "04_resources/terraform-tfstate"
-#    region = "us-east-1"
+#  tags = {
+#    Name        = "terraform-dimpu"
+#    #Environment = "Dev"
 #  }
-#}
+}
+
+terraform {
+  backend "s3" {
+    bucket = "terraform-dimpu"
+    key    = "04_resources/terraform-tfstate"
+    region = "us-east-1"
+  }
+}
 
 resource "aws_security_group" "allow_tls" {
   name        = "allow_tls"
