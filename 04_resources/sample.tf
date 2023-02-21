@@ -19,12 +19,12 @@ data "aws_ami" "example" {
 #}
 
 resource "aws_s3_bucket" "b" {
-  bucket = "my-tf-test-bucket"
+  bucket = "terraform-dimpu"
 
-  tags = {
-    Name        = "terraform-dimpu"
-    #Environment = "Dev"
-  }
+#  tags = {
+#    Name        = "terraform-dimpu"
+#    #Environment = "Dev"
+#  }
 }
 
 #terraform {
