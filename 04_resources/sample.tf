@@ -13,19 +13,19 @@ resource "aws_instance" "web" {
   instance_type = "t3.micro"
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
 
-#  tags = {
-#    Name = "test-centos8"
-#  }
+  tags = {
+    Name = "test-centos8"
+  }
 }
 
-resource "aws_s3_bucket" "b" {
-  bucket = "terraform-dimpu"
-
-#  tags = {
-#    Name        = "terraform-dimpu"
-#    #Environment = "Dev"
-#  }
-}
+#resource "aws_s3_bucket" "b" {
+#  bucket = "terraform-dimpu"
+#
+##  tags = {
+##    Name        = "terraform-dimpu"
+##    #Environment = "Dev"
+##  }
+#}
 
 #terraform {
 #  backend "s3" {
