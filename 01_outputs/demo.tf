@@ -14,8 +14,8 @@ output "demo" {
 
 data "aws_ami" "example" {
   most_recent = true
- # name_regex  = "Centos-8-DevOps-Practice"
-  owners      = ["ami-053b0d53c279acc90"]
+ name_regex  = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20230516"
+  owners      = ["099720109477"]
 }
 
 resource "aws_instance" "web" {
