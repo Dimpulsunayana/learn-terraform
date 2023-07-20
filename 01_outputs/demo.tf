@@ -7,14 +7,14 @@ output "demo1" {
 }
 
 
-#resource "aws_s3_bucket" "b" {
-#  bucket = "terraform-sunnu"
-#
-#  #  tags = {
-#  #    Name        = "terraform-dimpu"
-#  #    #Environment = "Dev"
-#  #  }
-#}
+resource "aws_s3_bucket" "bamhu" {
+  bucket = "terraform-sunnu"
+
+  #  tags = {
+  #    Name        = "terraform-dimpu"
+  #    #Environment = "Dev"
+  #  }
+}
 
 #data "aws_ami" "example" {
 #  most_recent = true
