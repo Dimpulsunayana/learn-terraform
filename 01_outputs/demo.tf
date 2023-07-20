@@ -8,7 +8,7 @@ output "demo1" {
 
 
 resource "aws_s3_bucket" "bamhu" {
-  bucket = "terraform-sunnu"
+  bucket = var.bucket_name
 
   #  tags = {
   #    Name        = "terraform-dimpu"
