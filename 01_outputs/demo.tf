@@ -1,5 +1,5 @@
 output "demo" {
-  value = "Hello dimpukitty"
+  value = "Hello soundarya"
 }
 
 
