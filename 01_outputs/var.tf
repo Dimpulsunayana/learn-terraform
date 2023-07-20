@@ -1,5 +1,5 @@
 variable "instance_name" {
-  default = "ubuntu_server"
+  default = "sunnu"
 }
 variable "instance_type" {
   default = "t2.micro"
