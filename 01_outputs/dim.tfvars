@@ -1,3 +1,3 @@
-instance_name = "ubuntu_server"
+instance_name = ""
 instance_type = "t2.micro"
-bucket_name = "gds123"
+#bucket_name = "gds123"
