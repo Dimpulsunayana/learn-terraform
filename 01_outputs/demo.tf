@@ -9,6 +9,7 @@ output "demo1" {
 
 resource "aws_s3_bucket" "bamhu" {
   bucket = var.bucket_name
+  region = "ap-south-1"
 
   #  tags = {
   #    Name        = "terraform-dimpu"
