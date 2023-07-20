@@ -1,2 +1,6 @@
-variable "instance_name" {}
-variable "instance_type" {}
+variable "instance_name" {
+  default = "ubuntu_server"
+}
+variable "instance_type" {
+  default = "t2.micro"
+}
