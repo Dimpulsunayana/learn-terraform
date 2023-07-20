@@ -7,15 +7,15 @@ output "demo1" {
 }
 
 
-resource "aws_s3_bucket" "bamhu" {
-  bucket = var.bucket_name
-  region = "ap-south-1"
-
-  #  tags = {
-  #    Name        = "terraform-dimpu"
-  #    #Environment = "Dev"
-  #  }
-}
+#resource "aws_s3_bucket" "bamhu" {
+#  bucket = var.bucket_name
+#  #region = "ap-south-1"
+#
+#  #  tags = {
+#  #    Name        = "terraform-dimpu"
+#  #    #Environment = "Dev"
+#  #  }
+#}
 
 data "aws_ami" "example" {
   most_recent = true
