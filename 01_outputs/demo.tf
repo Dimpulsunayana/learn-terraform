@@ -30,4 +30,4 @@ resource "aws_s3_bucket" "bamhu" {
 #  tags = {
 #    Name = var.instance_name
 #  }
-}
+#}
