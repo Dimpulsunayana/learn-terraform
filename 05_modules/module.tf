@@ -7,6 +7,10 @@ module "sg" {
   source = "./sg"
 }
 
+module "s3" {
+  source = "./s3bucket"
+}
+
 provider "aws" {
   region = "us-east-1"
 }
