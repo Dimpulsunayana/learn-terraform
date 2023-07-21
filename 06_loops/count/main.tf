@@ -5,12 +5,12 @@ data "aws_ami" "example" {
 }
 
 resource "aws_instance" "web" {
-  count = length(2)
+  count = length(var.demo)
   ami           = data.aws_ami.example.id
   instance_type = "t3.micro"
 
   tags = {
-    Name = "test"[count.index+1]
+    Name = var.demo[count.index]
   }
 }
 
@@ -18,6 +18,6 @@ output "out" {
   value = aws_instance.web.*.public_ip
 }
 
-#variable "demo" {
-#  default = ["cart","catalogue"]
-#}
+variable "demo" {
+  default = ["cart","catalogue"]
+}
